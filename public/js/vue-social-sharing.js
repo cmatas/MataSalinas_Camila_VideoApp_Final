@@ -51,9 +51,9 @@ var SocialSharingNetwork = {
   }
 };
 
-var facebook = {"sharer":"https://www.facebook.com/sharer/sharer.php?u=@url&title=@title&description=@description&quote=@quote","type":"popup"};
+var facebook = {"sharer":"https://www.facebook.com/sharer/sharer.php?&url=@facebookurl&title=@title&description=@description&quote=@quote","type":"popup"};
 var googleplus = {"sharer":"https://plus.google.com/share?url=@url","type":"popup"};
-var twitter = {"sharer":"https://twitter.com/intent/tweet?text=@title&url=@url&hashtags=@hashtags@twitteruser","type":"popup"};
+var twitter = {"sharer":"https://twitter.com/intent/tweet?url=@url&text=@title&hashtags=@hashtags@twitteruser","type":"popup"};
 var instagram = {"sharer":"https://www.instagram.com/","type":"popup"};
 var BaseNetworks = {
 	facebook: facebook,

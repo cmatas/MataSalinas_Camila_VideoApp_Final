@@ -8,6 +8,9 @@
       <!--alternate / fallback sources here-->
 </video>
 
+<div class="col-xs-12 col-sm-12">
+  <p>{{ review.con_name }}</p>
+</div>
 <!-- add the reviews -->
 <article class="comments" v-if="reviews.length > 0">
   <div v-for="(review, index) in reviews">

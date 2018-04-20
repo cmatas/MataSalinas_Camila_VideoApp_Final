@@ -9,7 +9,7 @@ exports.get_all_movies = (req, res) => {
       return console.log(err.message);
     }
 
-    let query = `SELECT DISTINCT * FROM tbl_content m, tbl_comments g WHERE m.con_id = g.comments_movie`;
+    let query = `SELECT * FROM tbl_content m, tbl_comments g WHERE m.con_id = g.comments_movie`;
     // let query = `SELECT * FROM tbl_content m, tbl_genre g, tbl_con_genre mg WHERE m.con_id = mg.con_id AND g.genre_id = mg.genre_id`;
 
     connect.query(query, (err, rows) => {
@@ -26,7 +26,8 @@ exports.get_all_movies = (req, res) => {
             mainpage : true,
             videopage : false,
             kids : false,
-            parents : false
+            parents : false,
+            movies : false
           });
     })
   })
@@ -56,7 +57,8 @@ exports.get_all_parents = (req, res) => {
             mainpage : false,
             videopage : false,
             kids : false,
-            parents : true
+            parents : true,
+            movies : false
           });
     })
   })
@@ -103,7 +105,7 @@ exports.get_one_movie = ((req, res) => {
       return console.log(err.message);
     }
 
-    let query = `SELECT * FROM tbl_comments WHERE comments_movie ="${req.params.id}"`;
+    let query = `SELECT * FROM tbl_comments c, tbl_content m WHERE c.comments_id = m.con_id AND comments_movie ="${req.params.id}"`;
 
     connect.query(query, (err, rows) => {
       connection.release(); //let somebodu else use this connection
@@ -116,11 +118,13 @@ exports.get_one_movie = ((req, res) => {
         res.render('movie', {
           movie : req.params.id,
           trailer : req.params.vidsrc,
+          url : `http://localhost:3000/${req.params.id}/${req.params.vidsrc}`,
           data : JSON.stringify(rows),
           mainpage : false,
           videopage : true,
           kids : false,
-          parents : false
+          parents : false,
+          movies : false
         });
       })
     })
@@ -172,7 +176,8 @@ exports.get_all_kids = (req, res) => {
             mainpage : false,
             videopage : false,
             kids : true,
-            parents : false
+            parents : false,
+            movies : false
           });
     })
   })
