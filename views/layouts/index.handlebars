@@ -8,9 +8,11 @@
 
 	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.15/dist/vue.js"></script>
-	<scrip src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
 	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.map"></script> -->
+	<script src="/js/vue-social-sharing.js"></script>
+
 </head>
 <body>
 	<header>
@@ -18,10 +20,9 @@
 		<nav>
 			<ul>
 				{{#if mainpage}}
-				<a href="/kids"><li>Kids</li></a>
+				<li><a href="/kids">Kids</a></li>
 				{{/if}}
-				<li><i class="fas fa-user-circle"></i></li>
-				<li><i class="fas fa-cog"></i></li>
+				<li><a href="/parents"><i class="fas fa-user-circle"></i></a></li>
 			</ul>
 		</nav>
 	</header>
@@ -31,14 +32,14 @@
 	</main>
 
 	<footer id="foot">
-		<social-sharing url="https://vuejs.org/"
+		<!-- <social-sharing url="https://vuejs.org/"
 		                      title="The Progressive JavaScript Framework"
 		                      description="Intuitive, Fast and Composable MVVM for building interactive interfaces."
 		                      quote="Vue is a progressive framework for building user interfaces."
 		                      hashtags="vuejs,javascript,framework"
 		                      twitter-user="vuejs"
 		                      :networks="overriddenNetworks"
-		                      v-cloak inline-template>
+		                      v-cloak inline-template> -->
 
 		<span>All Rights are Reserved</span>
 		<p class="copy">
@@ -68,8 +69,9 @@
 			</li>
 		</ul>
 	</footer>
-
 	<script>
+
+	Vue.use(SocialSharing);
 	      Vue.use(SocialSharing);
 	      new Vue({
 	        el: '#foot',
@@ -83,6 +85,12 @@
 	        }
 	      });
 	</script>
+
+	<!-- <script type="text/javascript">
+	Vue.$root.$on('social_shares_open', function (network, url) {
+// your event code
+});
+	</script> -->
   <script>
     var appData = {
       movies : {{{ data }}} // grab the unfiltered result set

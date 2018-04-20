@@ -4,7 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-// var SocialSharing = require('vue-social-sharing');
+// var SocialSharing = require('./public/js/vue-social-sharing');
 
 var xhb = require('express-handlebars');
 
