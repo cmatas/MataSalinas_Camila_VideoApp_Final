@@ -32,44 +32,48 @@
 	</main>
 
 	<footer id="foot">
-		<!-- <social-sharing url="https://vuejs.org/"
-		                      title="The Progressive JavaScript Framework"
-		                      description="Intuitive, Fast and Composable MVVM for building interactive interfaces."
-		                      quote="Vue is a progressive framework for building user interfaces."
-		                      hashtags="vuejs,javascript,framework"
-		                      twitter-user="vuejs"
-		                      :networks="overriddenNetworks"
-		                      v-cloak inline-template> -->
+		<div class="col-xs-6 col-sm-6">
+			<img style="height: 60px;" src="/images/roku-bw.png" alt="roku footer">
+		</div>
+		<div class="col-xs-6 col-sm-6">
+			<social-sharing  url="http://localhost:3000/{{{ movie }}}/{{{ trailer }}}"
+														title="Checkout this amazing piece of art I've seen!"
+														description="It's a great piece of art this one here"
+														quote="Love this"
+														hashtags="movie,thebest,amazing"
+														facebookurl="{{ url }}"
+														:networks="overriddenNetworks"
+														v-cloak inline-template>
+			<ul>
+				<li>
+					<network network="facebook" id="facebook">
+						<i class="fab fa-facebook"></i>
+					</network>
+				</li>
+				<li>
+					<network network="twitter" id="twitter">
+						<i class="fab fa-twitter-square"></i>
+					</network>
+				</li>
+				<li>
+					<network network="googleplus" id="googleplus">
+						<i class="fab fa-google-plus-square"></i>
+					</network>
+				</li>
+				<li>
+					<network network="instagram" id="instagram"><!-- made up -->
+						<i class="fab fa-instagram"></i>
+					</network>
+				</li>
+			</ul>
+		</social-sharing>
 
-		<span>All Rights are Reserved</span>
 		<p class="copy">
-			&copy; 2018 The Awesome Company, Inc
+			&copy; Roku 2018
 		</p>
 
-	<social-sharing url="https://vuejs.org/" inline-template id="socialtag">
-		<ul>
-			<li>
-				<network network="facebook" id="facebook">
-					<i class="fab fa-facebook"></i>
-				</network>
-			</li>
-			<li>
-				<network network="twitter" id="twitter">
-					<i class="fab fa-twitter-square"></i>
-				</network>
-			</li>
-			<li>
-				<network network="googleplus" id="googleplus">
-					<i class="fab fa-google-plus-square"></i>
-				</network>
-			</li>
-			<li>
-				<network network="instagram" id="instagram"><!-- made up -->
-					<i class="fab fa-instagram"></i>
-				</network>
-			</li>
-		</ul>
-	</social-sharing>
+		</div>
+
 	</footer>
 	<script>
 		Vue.use(SocialSharing);
@@ -91,7 +95,7 @@
       movies : {{{ data }}} // grab the unfiltered result set
     }
   </script>
-	<script src="urlchange.js"
+	<!-- <script src="urlchange.js" -->
   {{#if mainpage}}
   <script src="/js/main.js"></script>
 	{{/if}}
