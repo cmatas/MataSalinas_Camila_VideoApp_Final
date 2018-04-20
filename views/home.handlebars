@@ -1,0 +1,90 @@
+<section id="app" class="movie-genres">
+  <div class="movie-wrapper">
+    <!-- <aside>
+      <h4 class="movie-title">{{ defaultMovie.con_name }}</h4>
+      <span class="movie-year">
+        {{ defaultMovie.movies_year }} &nbsp;&bull;&nbsp; {{ defaultMovie.con_runtime}}
+      </span>
+      <i class="movie-genre">{{ defaultMovie.genre_name }}</i>
+    </aside>
+    <video autoplay>
+      <source src="videos/{{ defaultMovie.con_video }}" type="video/mp4"> -->
+      <!-- should load in the fallback sources here -->
+    <!-- </video> -->
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 hom">
+  <div class="col-xs-12 col-sm-12">
+    <h4>Welcome to your home page! <br>What would you like to do?</h4>
+  </div>
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+      <a href="/movies/movie">
+        <div class="circb">
+          <img class="img-responsive" src="/images/movie-icon.png" alt="3 locos">
+        </div>
+      </a>
+      <a href="/movies/movie">
+        <div class="buttnb">
+          <h4>Movies</h4>
+        </div>
+      </a>
+    </div>
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+      <div class="circb">
+        <img class="img-responsive" src="/images/music-icon.png" alt="3 locos">
+      </div>
+      <div class="buttnb">
+        <h4>Music</h4>
+      </div>
+    </div>
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+      <a href="/movies/series">
+        <div class="circb">
+          <img id="tv" class="img-responsive" src="/images/tv-icon.png" alt="3 locos">
+        </div>
+      </a>
+      <a href="/movies/series">
+        <div class="buttnb">
+          <h4>TV</h4>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  </div>
+<!-- users -->
+  <div class="users">
+  <div class="usera">
+      <h4>USER</h4>
+      <a href="/parents">
+        <div class="shown">
+          <img src="/images/user.png" alt="user">
+          <p>User 1</p>
+        </div>
+      </a>
+    </div>
+    <div class="userb">
+      <h4>KIDS</h4>
+      <a href="/kids">
+        <div class="shown">
+          <img src="/images/userkid.png" alt="user">
+          <p>Kid 1</p>
+        </div>
+      </a>
+    </div>
+</div>
+<!-- users end -->
+
+  <section class="genre-lists" v-for="rating in ratings">
+    <h6 class="genre-name">HIGHLIGHTS</h6>
+
+    <div v-if="rating.movies.length > 0">
+
+      <div class="genre-item">
+          <div class="movie-list" v-for="movie in rating.movies">
+            <a :href="'/movies/' + movie.con_id + '/' + movie.con_video">
+              <img class ="movie-thumb" :src="'/images/movies/' + movie.con_image" :alt="movie.con_name">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+</section>

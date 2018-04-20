@@ -1,0 +1,19 @@
+<section id="app" class="movie-genres">
+  <div class="movie-wrapper">
+    <h3>${ message }</h3>
+  </div>
+
+  <section class="genre-lists" v-for="genre in genres">
+
+    <div v-if="genre.movies.length > 0">
+      <div class="genre-item">
+        <h6 class="genre-name">${ genre.name }</h6>
+          <div class="movie-list" v-for="movie in genre.movies">
+            <a :href="'/movies/' + movie.con_id + '/' + movie.con_video">
+              <img class ="movie-thumb" :src="'/images/movies/' + movie.con_image" :alt="movie.con_name">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+</section>

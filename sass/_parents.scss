@@ -1,0 +1,17 @@
+.listbuttons {
+  border: solid 1px white;
+  padding: 28px;
+  width: 50%;
+  height: 100px;
+  h4 {
+    float: right;
+  }
+  img {
+    width: 60px;
+    float: left;
+  }
+  img:last-child {
+    margin-top: 20px;
+    float: left;
+  }
+}

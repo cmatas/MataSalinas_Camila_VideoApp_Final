@@ -1,0 +1,76 @@
+<section id="app" class="movie-genres">
+  <div class="movie-wrapper">
+
+    <aside class="col-xs-6 col-sm-4">
+      <h4 class="movie-title">{{ defaultMovie.con_name }}</h4>
+      <span class="movie-year">
+        {{ defaultMovie.con_year }} &nbsp;&bull;&nbsp; {{ defaultMovie.con_runtime}}
+      </span>
+      <i class="movie-genre">{{ defaultMovie.genre_name }}</i>
+    </aside>
+    <video autoplay>
+      <source src="videos/{{ defaultMovie.con_video }}" type="video/mp4">
+      <!-- should load in the fallback sources here -->
+    </video>
+
+  </div>
+  <div class="soon">
+    <div class="col-xs-12 col-sm-12">
+      <h3>COMING SOON</h3>
+    </div>
+    <div class="col-xs-6 col-sm-6">
+      <img class="img-responsive" src="/images/movies/golden.jpg" alt="golden girls">
+    </div>
+    <div class="col-xs-6 col-sm-6">
+      <img class="img-responsive" src="/images/movies/friends.jpg" alt="friends">
+    </div>
+  </div>
+  <!-- <div class="users">
+    <h3>COMING SOON</h3>
+    <div class="row">
+      <div class="col-xs-6 col-sm-6">
+        <img class="img-responsive" src="/images/movies/golden.jpg" alt="golden girls">
+      </div>
+      <div class="col-xs-6 col-sm-6">
+        <img class="img-responsive" src="/images/movies/friends.jpg" alt="friends">
+      </div>
+    </div>
+  </div> -->
+  <div class="recom">
+    <div class="col-xs-12 col-sm-12">
+      <h3>LIST</h3>
+    </div>
+    <div class="col-xs-4 col-sm-4 listbuttons">
+      <img class="img-responsive" src="/images/icons/like.png" alt="like">
+      <h4>LIKE</h4>
+    </div>
+    <div class="col-xs-4 col-sm-4 listbuttons">
+      <img class="img-responsive" src="/images/icons/saved.png" alt="like">
+      <h4>SAVED</h4>
+    </div>
+    <div class="col-xs-4 col-sm-4 listbuttons">
+      <img class="img-responsive" src="/images/icons/future.png" alt="like">
+      <h4>FUTURE</h4>
+    </div>
+    <div class="col-xs-4 col-sm-4 listbuttons">
+      <img class="img-responsive" src="/images/icons/more.png" alt="like">
+      <h4>MORE</h4>
+    </div>
+  </div>
+<section style="clear: both" class="genre-lists" v-for="genre in genres">
+  <h6 class="genre-name">MOVIES AND SERIES</h6>
+
+  <div v-if="genre.movies.length > 0">
+
+    <div class="genre-item">
+        <div class="movie-list" v-for="movie in genre.movies">
+          <a :href="'/movies/' + movie.con_id + '/' + movie.con_video">
+            <img class ="movie-thumb" :src="'/images/movies/' + movie.con_image" :alt="movie.con_name">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+</section>

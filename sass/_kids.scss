@@ -1,0 +1,88 @@
+.listbutton {
+  padding: 28px;
+  width: 50%;
+  height: 100px;
+}
+
+.listbutton img {
+  width: 60px;
+  float: left;
+}
+.listbutton img:last-child {
+  /* width: 20%; */
+  margin-top: 20px;
+  float: left;
+}
+
+.listbutton h4 {
+  float: right;
+}
+
+.ages {
+  list-style: none;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  padding: 10px;
+}
+.ages li {
+  display: inline;
+  margin-right: 12%;
+  /* float: left; */
+}
+
+.ages li:first-child {
+  margin-left: 2%;
+}
+.ages li:last-child {
+  margin-right: 0%;
+}
+
+/* kids */
+.kidcon {
+  background: #F7F9F9;
+  border: none;
+  margin: 0;
+  width: auto;
+  color: black;
+}
+
+.sp {
+  background: #009966;
+  /* width: auto; */
+}
+
+.act {
+  background: #cc0033;
+  /* width: auto; */
+}
+
+.edu {
+  background: #ff6600;
+  /* width: auto; */
+}
+
+.ser {
+  background: #33cccc;
+  /* width: auto; */
+}
+
+.music {
+  background: #FBFCFC;
+}
+
+// music
+.recom {
+  h3 {
+    display: block;
+    clear: both;
+  }
+}
+.listbuttonm {
+  width: 50%;
+  height: inherit;
+}
+.listbuttonm img {
+  width: 80px;
+  margin: 0 auto;
+  padding: 20px;
+}

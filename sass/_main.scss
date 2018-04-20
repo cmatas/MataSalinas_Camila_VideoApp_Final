@@ -1,0 +1,193 @@
+body {
+	font: 14px "Century Gothic", Arial, sans-serif;
+	background-color: black;
+	color: white;
+}
+
+a {
+	color: #00B7FF;
+	text-decoration: none;
+}
+
+header {
+	background-color: #333;
+	padding: 9px 14px;
+	position: fixed;
+	z-index: 500;
+	width: 100%;
+
+	span {
+		margin-left: 12px;
+		font-weight: bolder;
+		font-size: 1.5em;
+		text-transform: uppercase;
+		position: relative;
+		top: -4px;
+	}
+}
+
+video { width: 100%; }
+
+.movie-wrapper {
+	position: relative; padding-top: 52px;
+
+	aside {
+		position: absolute;
+		left: 0em;
+		top: 51px;
+		padding: 2em;
+		// background-color: rgba(0, 0, 0, 0.8);
+	}
+}
+
+.movie-title { font-size: 1.7em; }
+.movie-year, .movie-time { font-size: 1.5em; }
+
+.movie-genre {
+	font-size: 1.25em;
+	font-weight: bolder;
+	display: block;
+	text-transform: uppercase;
+	margin-top: 8px;
+}
+
+.genre-name { font-size: 2em; padding: 1em 0 0.35em; }
+
+.movie-thumb { width: 160px; }
+
+.genre-list {
+  padding: 0 14px;
+  list-style-type: none;
+}
+
+.genre-lists {
+	padding: 0 14px; overflow: hidden;
+
+	> div {
+		position: relative;
+		transition: all .5s;
+		white-space: nowrap;
+		overflow-x: auto;
+		overflow-y: hidden;
+	}
+}
+
+.genre-item { display: inline-block; }
+
+.movie-list { display: inline-block; margin-right: 1.25em; }
+
+nav {
+	ul {
+		position: absolute;
+		right: 3em;
+		top: 1.2em;
+		list-style-type: none;
+
+		li {
+			display: inline-block;
+			font-size: 1.25em;
+			padding: 0 0.2em;
+			cursor: pointer;
+		}
+	}
+}
+
+footer {
+	padding: 2em 1em;
+	clear: both;
+
+
+	ul {
+		list-style-type: none;
+
+		li {
+			font-size: 2.5em;
+			display: inline-block;
+			margin-right: 0.4em;
+			color: rgba(255, 255, 255, 0.3);
+			margin-top: 0.4em;
+		}
+	}
+}
+
+#logo {
+	display: block;
+	margin: 0 auto;
+	margin-top: -30px;
+}
+
+.hom {
+  background: url('../images/space.jpg') 50%;
+  padding:50px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+	h4 {
+  	color: white;
+  	font-family: 'Century Gothic',sans-serif;
+  	text-align: center;
+  	margin-top: 20px;
+  	margin-bottom: 30px;
+	}
+}
+
+.circb {
+  background: rgba(246, 248, 248, 0.8);
+  border-radius: 100px;
+  padding: 15px;
+	img {
+  	margin: 0 auto;
+  	height: 50px;
+	}
+}
+
+.userb {
+	// padding: 10px;
+  // background: #2E292B;
+	&:first-child{
+		background: white;
+	}
+
+}
+
+.users {
+	width: 100vw;
+	.usera{
+		background: #2E292B;
+		float: left;
+		width: 46%;
+		margin: 2%;
+		padding: 50px;
+	}
+	.userb{
+		background: #2E292B;
+		float: right;
+		width: 46%;
+		margin: 2%;
+		padding: 50px;
+	}
+}
+.shown {
+  // padding: 10px;
+  // background: #2E292B;
+}
+.shown img {
+  display: block;
+  width:40%;
+  margin: 0 auto;
+}
+
+.shown p {
+  text-align: center;
+  margin-top: 15px;
+}
+
+// @media only screen and (max-width: 10px) {
+//     body {
+//         background-color: lightblue;
+//     }
+// }
+
+textarea {
+	color: black;
+
+}

@@ -1,0 +1,74 @@
+<section id="app" class="movie-genres">
+  <div class="movie-wrapper">
+    <aside>
+      <h4 class="movie-title">{{ defaultMovie.con_name }}</h4>
+      <span class="movie-year">
+        {{ defaultMovie.con_year }} &nbsp;&bull;&nbsp; {{ defaultMovie.con_runtime}}
+      </span>
+    </aside>
+    <video autoplay>
+      <source src="videos/{{ defaultMovie.con_video }}" type="video/mp4">
+      <!-- should load in the fallback sources here -->
+    </video>
+
+  </div>
+<!-- genres -->
+<div class="genresk">
+  <div class="col-xs-12 col-sm-12">
+    <h3>MORE GENRES</h3>
+  </div>
+  <div class="col-xs-6 col-sm-6 listbutton sp">
+    <img class="img-responsive" src="/images/icons/sports.png" alt="like">
+    <h4>SPORTS</h4>
+  </div>
+  <div class="col-xs-6 col-sm-6 listbutton act">
+    <img class="img-responsive" src="/images/icons/action.png" alt="like">
+    <h4>ACTION</h4>
+  </div>
+  <div class="col-xs-6 col-sm-6 listbutton edu">
+    <img class="img-responsive" src="/images/icons/educational.png" alt="like">
+    <h4>EDUCATE</h4>
+  </div>
+  <div class="col-xs-6 col-sm-6 listbutton ser">
+    <img class="img-responsive" src="/images/icons/serious.png" alt="like">
+    <h4>SERIOUS</h4>
+  </div>
+  <!-- genres end -->
+  <!-- music -->
+  <div class="musick">
+    <div class="col-xs-12 col-sm-12">
+      <h3>MUSIC</h3>
+    </div>
+    <div class="col-xs-6 col-sm-6 listbuttonm">
+      <img class="img-responsive" src="/images/icons/classic.png" alt="like">
+    </div>
+    <div class="col-xs-6 col-sm-6 listbuttonm">
+      <img class="img-responsive" src="/images/icons/rap.png" alt="like">
+    </div>
+    <div class="col-xs-6 col-sm-6 listbuttonm">
+      <img class="img-responsive" src="/images/icons/rock.png" alt="like">
+    </div>
+    <div class="col-xs-6 col-sm-6 listbuttonm">
+      <img class="img-responsive" src="/images/icons/country.png" alt="like">
+    </div>
+  </div>
+  <!-- music end -->
+</div> 
+
+</div>
+<section style="clear: both" class="genre-lists" v-for="genre in genres">
+  <h6 class="genre-name">MOVIES AND SERIES</h6>
+
+  <div v-if="genre.movies.length > 0">
+
+    <div class="genre-item">
+        <div class="movie-list" v-for="movie in genre.movies">
+          <a :href="'/movies/' + movie.con_id + '/' + movie.con_video">
+            <img class ="movie-thumb" :src="'/images/movies/' + movie.con_image" :alt="movie.con_name">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</section>
