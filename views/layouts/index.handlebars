@@ -46,6 +46,7 @@
 			&copy; 2018 The Awesome Company, Inc
 		</p>
 
+	<social-sharing url="https://vuejs.org/" inline-template id="socialtag">
 		<ul>
 			<li>
 				<network network="facebook" id="facebook">
@@ -68,29 +69,23 @@
 				</network>
 			</li>
 		</ul>
+	</social-sharing>
 	</footer>
 	<script>
+		Vue.use(SocialSharing);
 
-	Vue.use(SocialSharing);
-	      Vue.use(SocialSharing);
-	      new Vue({
-	        el: '#foot',
-	        data: {
-	          overriddenNetworks: {
-	            "test": {
-	              "sharer": "https://google.com",
-	              "type": "popup"
-	            },
-	          }
-	        }
-	      });
+		new Vue({
+			el: '#foot',
+			data: {
+				overriddenNetworks: {
+					"test": {
+						"sharer": "https://google.com",
+						"type": "popup"
+					},
+				}
+			}
+		});
 	</script>
-
-	<!-- <script type="text/javascript">
-	Vue.$root.$on('social_shares_open', function (network, url) {
-// your event code
-});
-	</script> -->
   <script>
     var appData = {
       movies : {{{ data }}} // grab the unfiltered result set
