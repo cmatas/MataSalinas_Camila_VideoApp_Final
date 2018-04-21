@@ -1,5 +1,10 @@
 .comments {
-	width: 45%; display: inline-block;
+	height: 40vh;
+	width: 45%;
+	display: inline-block;
+	float: left;
+	overflow-y: auto;
+	margin-bottom: 1.75em;
 
 	 > div {
 		padding: 0 1em;
@@ -44,6 +49,7 @@
 	// float: right;
 	width: 45%;
 	display: inline-block;
+	float: right;
 	padding-left: 1.5em;
 
 	label:not(.star-rating-star) {
@@ -60,11 +66,15 @@
 	input[type=submit] {
 		padding: 0.7em 1em;
 		border-radius: 8px;
-		background-color: orange;
+		background: #59B5DF;
 		color: white;
 		font-weight: bold;
 		font-size: 1.25em;
 		margin-top: 1em;
+		transition: 0.2s ease;
+		&:hover {
+			opacity: 0.5;
+		}
 	}
 
 	textarea {

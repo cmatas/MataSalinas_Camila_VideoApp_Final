@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 20-04-2018 a las 12:24:20
+-- Tiempo de generación: 21-04-2018 a las 02:57:52
 -- Versión del servidor: 5.7.19
 -- Versión de PHP: 5.6.31
 
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `tbl_comments` (
   `comments_movie` int(11) NOT NULL,
   `comments_rating` int(11) NOT NULL,
   PRIMARY KEY (`comments_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `tbl_comments`
@@ -49,16 +49,22 @@ INSERT INTO `tbl_comments` (`comments_id`, `comments_auth`, `comments_copy`, `co
 (3, NULL, 'It sucked.', '2018-04-01 14:54:32', 1, 1),
 (4, NULL, 'It was amazing. I really liked this way better than any Tarantino movie that\'s ever been made, EVER.\r\n\r\nCuz Tarantino is crap', '2018-04-01 14:55:29', 1, 3),
 (5, NULL, 'I can\'t remember it but they say it was nice', '2018-04-01 14:56:55', 3, 4),
-(6, NULL, 'Way too violent. I thought Hugh Jackman would at least do a song and dance, but was VERY disappointed.', '2018-04-01 14:57:35', 3, 1),
-(7, NULL, 'OMG i can\'t get enough Deadpool.. what a great movie', '2018-04-01 15:11:30', 7, 5),
-(8, NULL, 'I really liked this. Prof X made me sad tho. What a way to go...', '2018-04-01 15:51:58', 3, 4),
+(6, NULL, 'Such an evil lookie movie', '2018-04-01 14:57:35', 3, 1),
+(7, NULL, 'The memories are too great!', '2018-04-01 15:11:30', 7, 5),
+(8, NULL, 'Really nice, shows society\'s darkest face', '2018-04-01 15:51:58', 3, 4),
 (9, NULL, 'Nostalgia', '2018-04-19 16:01:22', 4, 5),
 (10, NULL, 'The memories of CRINGE', '2018-04-19 16:27:01', 5, 4),
 (11, NULL, 'This gave me nightmares', '2018-04-19 16:38:00', 8, 1),
 (12, NULL, 'Superman looked so weird in this movie', '2018-04-19 22:42:27', 6, 2),
 (13, NULL, 'A masterpiece', '2018-04-20 01:56:53', 3, 4),
 (14, NULL, 'Beautiful directing', '2018-04-20 01:57:15', 3, 5),
-(15, NULL, 'Sorry, wrong comment but its still great. LOVE YOU FLINTSTONES', '2018-04-20 02:02:01', 7, 5);
+(15, NULL, 'Sorry, wrong comment but its still great. LOVE YOU FLINTSTONES', '2018-04-20 02:02:01', 7, 5),
+(16, NULL, 'Pretty annoying with all that crap', '2018-04-20 22:53:54', 4, 1),
+(17, NULL, 'Liked it buuuut...', '2018-04-21 02:49:54', 3, 2),
+(18, NULL, 'It is meant for a maturer audience', '2018-04-21 02:50:19', 3, 4),
+(19, NULL, 'Could have been better', '2018-04-21 02:50:46', 3, 2),
+(20, NULL, 'help', '2018-04-21 02:51:31', 3, 0),
+(21, NULL, 'this aint working', '2018-04-21 02:51:37', 3, 0);
 
 -- --------------------------------------------------------
 
