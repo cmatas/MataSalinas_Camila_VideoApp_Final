@@ -105,7 +105,7 @@ exports.get_one_movie = ((req, res) => {
       return console.log(err.message);
     }
 
-    let query = `SELECT * FROM tbl_comments c, tbl_content m WHERE c.comments_id = m.con_id AND comments_movie ="${req.params.id}"`;
+    let query = `SELECT * FROM tbl_comments WHERE comments_movie ="${req.params.id}"`;
 
     connect.query(query, (err, rows) => {
       connection.release(); //let somebodu else use this connection

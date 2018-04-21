@@ -9,6 +9,12 @@ module.exports = function(grunt) {
         my_target: {
           files: {
             'public/dist/main.min.js': ['public/js/main.js'],
+            'public/dist/kidpage.min.js': ['public/js/kidpage.js'],
+            'public/dist/movpage.min.js': ['public/js/movpage.js'],
+            'public/dist/parentpage.min.js': ['public/js/parentpage.js'],
+            'public/dist/social-sharing.min.js': ['public/js/social-sharing.js'],
+            'public/dist/indexs.min.js': ['public/js/indexs.js'],
+            'public/dist/vue-social-sharing.min.js': ['public/js/vue-social-sharing.js'],
             'public/dist/videopage.min.js': ['public/js/videopage.js']
           }
         }
